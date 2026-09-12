@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+}
+
+/* Accessible light theme overrides for containers */
+html.light .bg-slate-900 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html.light .bg-slate-950 {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light .bg-slate-950\/70,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/80 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/50 {
+  background-color: #ffffff !important;
+}
+
+html.light .border-slate-800,
+html.light .border-slate-700,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/60,
+html.light .border-slate-700\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .divide-slate-800,
+html.light .divide-slate-800\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .bg-slate-800 {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+html.light .bg-slate-800\/40,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/80 {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .bg-slate-800:hover {
+  background-color: #cbd5e1 !important;
+}
+
+html.light select,
+html.light input {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Optimized Print Layout for "Print Report" / "Save as PDF" */
+@media print {
+  /* Hide non-printable navigation, buttons, popups, and interactive controls */
+  nav,
+  header,
+  #navbar-upload-csv-btn,
+  #dashboard-upload-csv-btn,
+  #btn-download-pdf-report,
+  #btn-print-report,
+  #btn-export-full-deck-pdf,
+  #theme-toggle-btn,
+  .no-print,
+  button,
+  .no-export {
+    display: none !important;
+  }
+
+  body, html {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ensure card backgrounds and text are clean and visible on paper */
+  .bg-slate-900,
+  .bg-slate-950,
+  .bg-slate-950\/80,
+  .bg-slate-950\/70,
+  .bg-slate-900\/80 {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+  }
+
+  .text-white, .text-slate-100, .text-slate-200 {
+    color: #0f172a !important;
+  }
+
+  .text-slate-300, .text-slate-400 {
+    color: #475569 !important;
+  }
+
+  /* Page break cleanly */
+  .break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+

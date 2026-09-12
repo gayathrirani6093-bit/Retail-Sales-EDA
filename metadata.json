@@ -1,0 +1,6 @@
+{
+  "name": "Retail Sales EDA",
+  "description": "Comprehensive exploratory data analysis (EDA) guide, interactive Jupyter notebook runner, and predictive analytics dashboard for retail sales data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
